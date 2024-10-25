@@ -1,0 +1,734 @@
+           
+HOME.HTML
+
+<html>
+<frameset rows="40%,*">
+    <frame src ="top.html">
+        <frameset cols="15%,*">
+            <frame src ="left.html">
+                <frame src="right.html" name="Top_left"></frame>
+            </frame>
+        </frameset>
+    </frame>
+</frameset>
+</html>
+
+
+TOP.HTML:
+--------
+<html>
+    <head>
+        <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+            padding: 10px;
+        }
+        .grid-container > div {
+            text-align: center;
+            padding :20px 0;
+            font-size: 30px;
+
+            }
+            body{
+                background: rgb(121, 161, 11);
+            }.marquee{
+                background: rgb(153, 143, 149);
+                text-align: center;
+                direction: "right";
+
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <center>
+                <marquee bgcolor="pink" width="600" >
+                <font face="Bold" size="8" color="blue"><b><i>
+Online Book Store</i></b>
+                </font>
+                </marquee>
+                </center>
+
+            <div class="grid-container">
+                <div><a href="login.html" target="Top_left">Login</a> </div>
+                <div><a href="Register.html" target="Top_left">Register</a></div>
+                <div><a href="Catalogue.html" target="Top_left">Catalogue</a></div>  
+                
+              </div>
+
+        </center>
+
+
+LEFT.HTML:
+---------
+<html>
+    <head>
+        <style>
+        .grid-container {
+            display: grid;
+           grid-template-rows: auto auto auto auto;
+            gap: 10px;
+            padding: 10px;  
+        }
+        .grid-container > div {
+            text-align: left;
+            padding :20px 0;
+            font-size: 30px;
+            }
+            body{
+                background: rgb(110, 143, 180);
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+<div class="grid-container">
+                <div><a href="CSE.html" target="Top_left">CSE</a></div>
+                <div><a href="AIML.html" target="Top_left">AIML</a></div>
+                <div><a href="ECE.html" target="Top_left">ECE</a></div> 
+                <div><a href="IT.html" target="Top_left">IT</a></div>  
+              </div>
+        </center>
+    </body>
+</html>
+
+RIGHT.HTML:
+----------
+  
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body bgcolor="orange">
+        <h1 align="center">Welcome to the Online Book Store!!!</h1>
+        
+        <h2 align="center">"A Huge Collection Of Engineering E-Books"</h2>
+    </body>
+</html>
+
+
+LOGIN.HTML:
+-----------
+<html >
+<head>
+<title>Login Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0; 
+        color: #333; 
+    }
+    .container {
+        width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff; 
+    }
+    h2 {
+        text-align: center;
+        color: #333; 
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049; 
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Login</h2>
+    <form action="login_process.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+</body>
+</html>
+
+
+REGISTRATION.HTML:
+------------------
+<html >
+<head>
+<title>Register</title><style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0; 
+        color: #333; 
+    }
+    .container {
+        width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 3px solid #087aaf;
+        border-radius: 5px;
+        background-color: #cec113; 
+    }
+    h2 {
+        text-align: center;
+        color: #333; 
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049; 
+    }
+</style>
+<form>  
+<div class="container"> 
+<label> Firstname </label>         
+<input type="text" name="firstname" size="15"/> <br> <br>  
+<label> Lastname: </label>         
+<input type="text" name="lastname" size="15"/> <br> <br> 
+<label>   
+Course :  
+</label>   
+<select>  
+<option value="Course">Course</option>  
+<option value="BCA">BCA</option>  
+<option value="BBA">BBA</option>  
+<option value="B.Tech">B.Tech</option>  
+<option value="MBA">MBA</option>  
+<option value="MCA">MCA</option>  
+<option value="M.Tech">M.Tech</option>  
+</select>  
+<br>  <br>  
+<label>   
+Gender :  
+</label><br>  
+<input type="radio" name="male"/> Male <br>  
+<input type="radio" name="female"/> Female <br>  
+<input type="radio" name="other"/> Other  
+<br>   <br>  
+<label>   
+Phone :  
+</label>  
+<input type="text" name="country code"  value="+91" size="2"/>   
+<input type="text" name="phone" size="10"/> <br> <br>  
+Address  
+<br>  
+<textarea cols="50" rows="5" value="address">  
+</textarea>  
+<br> <br>  
+Email:  
+<input type="email" id="email" name="email"/> <br>    
+<br> <br>  
+Password:  
+<input type="Password" id="pass" name="pass"> <br>   
+<br> <br>  
+Re-type password:  
+<input type="Password" id="repass" name="repass"> <br> <br>  
+<input type="button" value="Submit"/> 
+</div> 
+</form> 
+</body>  
+</html>
+
+
+CATALOG.HTML:
+-------------
+<!DOCTYPE html>
+<html>
+<style>
+.catalogue {
+margin-left: auto;
+margin-right: auto;
+width: 600px;
+height: 500px;
+background-color: #99ccff;
+}
+.btnn{
+text-align: center;}
+</style>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Catalogue</title>
+</head>
+<body>
+<div class="col-4">
+<h1 style="text-align: center; color: #336699">THE BOOK
+WORM</h1>
+<h3 style="text-align: center">Online Book Store</h3>
+</div>
+</div>
+</div>
+<h1 style="text-align: center; color: black">CATALOGUE</h1>
+<br>
+<br>
+<table border=1 class="catalogue">
+<tr>
+<th>Book Details</th>
+<th>Price</th>
+</tr>
+<tr><td>Data Structures through C,Yashwant Kanetkar, BPB
+Publications</td>
+<td>&nbsp;$40 &nbsp;</td>
+</tr>
+<tr>
+<td>Higher Engineering Mathematics, Ramana B.V., Tata McGraw</td>
+<td>&nbsp;$35 &nbsp;</td>
+</tr>
+<tr><td>Computer Organization & Architecture, Rajaraman, PHI
+Learning</td>
+<td>&nbsp;$50 &nbsp;</td>
+</tr>
+<tr>
+<td>Design & Analysis of Algorithms, S. Sridhar, Oxford</td>
+<td>&nbsp;$30 &nbsp;</td>
+</tr>
+<tr>
+<td>Fundamental of Database Systems, E. Ramez and Navathe,
+Pearson</td>
+<td>&nbsp;$65 &nbsp;</td>
+</tr>
+</table>
+<div class="btnn">
+<a href="./shopping.html">
+<button class="btn btn-primary" >Click to buy</button>
+</a>
+</div>
+</body>
+</html>
+
+
+CSE.HTML:
+---------
+<html>
+<head><title>CSE</title></head>
+<body bgcolor="cyan">
+<center><font color="blue"><h1>Computer Science and Engineering</h1></font></center>
+<br>
+<table align="center">
+<tr>
+<td>Text Books</td>
+<td>
+<select >
+<option value="select the book" selected>Select the book
+<option value="C&Ds">C&Ds
+<option value="DS">DS
+<option value="Java">Java
+<option value="Oracle">Oracle
+<option value="Ms SQL Server">Ms SQL Server
+
+<option value="MySql">MySql
+</select>
+</td></tr>
+<tr>
+<td>Quantity</td>
+<td><input type="text" id="q"></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<form method=post action="order.html">
+<input type="submit">
+value=Buy  />
+</form>
+</td>
+</tr>
+</table>
+<center>
+   <pre> Cost of one book is"500" + shipping "100" </pre>
+</center>
+</body>
+</html> 
+
+
+
+
+
+
+SQL code:
+---------
+create database nodejs;
+use nodejs;
+CREATE TABLE student ( s_id int,s_name varchar(50),s_address  varchar(50),email varchar(50));
+select * from student;
+
+
+
+Insert java program:
+--------------------
+import java.sql.*;
+import java.util.Scanner;
+public class InsertData 
+    public static void main(String[] args) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost/nodejs", "root", "1234");
+                 PreparedStatement pstmt = con.prepareStatement("INSERT INTO student VALUES (?, ?, ?,?)")) {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Inserting Data into student table:");
+                System.out.println("________________________________________");
+                System.out.print("Enter student id: ");
+                int s_id = sc.nextInt();
+                System.out.print("Enter student name: ");
+                String s_name = sc.next();
+                System.out.print("Enter student address: ");
+                String s_address = sc.next();
+                System.out.print("Enter student address: ");
+                String email = sc.next();
+                pstmt.setInt(1, s_id);
+                pstmt.setString(2, s_name);
+                pstmt.setString(3, s_address);
+                pstmt.setString(4, email);
+              pstmt.executeUpdate();
+              System.out.println("Data inserted successfully into student table");
+            } catch (SQLException err) {
+                System.out.println("ERROR: " + err);
+            }
+        } catch (ClassNotFoundException e) {
+            System.out.println("MySQL JDBC driver not found");
+        }
+    }
+}
+
+
+
+
+
+DELETE JAVA PROGRAM:
+--------------------
+package nodejs;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+public class Delete {
+	public static void main(String[] args) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost/nodejs", "root", "1234");
+                    Statement s = con.createStatement()) {
+                   Scanner sc = new Scanner(System.in);
+                   System.out.println("Delete Data from student table:");
+                   System.out.println("________________________________________");
+                   System.out.print("Enter student id: ");
+                   int sid = sc.nextInt();
+                   String deleteQuery = "DELETE FROM student WHERE s_id=" + sid;
+                   s.executeUpdate(deleteQuery);
+                   System.out.println("Data deleted successfully");
+               } catch (SQLException err) {
+                   System.out.println("ERROR: " + err);
+               }
+        } catch (ClassNotFoundException e) {
+            System.out.println("MySQL JDBC driver not found");
+        }
+    }
+}
+
+
+
+UPDATE JAVA PROGRAM:-
+--------------------
+package nodejs;
+import java.sql.*;
+import java.util.Scanner;
+public class Update {
+public static void main(String[] args) {
+try {
+Class.forName("com.mysql.cj.jdbc.Driver");
+try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost/nodejs", "root", "1234");
+Statement s = con.createStatement()) {
+Scanner sc = new Scanner(System.in);
+System.out.println("update Data from student table:");
+System.out.println("________________________________________");
+System.out.print("Enter student id: ");
+int sid = sc.nextInt();
+String updateQuery = "update student set s_address='wanapathy' WHERE s_id=" + sid;
+s.executeUpdate(updateQuery);
+System.out.println("Data update successfully");
+} catch (SQLException err) {
+System.out.println("ERROR: " + err);
+}
+} catch (ClassNotFoundException e) {
+System.out.println("MySQL JDBC driver not found");
+}}}
+
+
+
+SUM:
+-----
+package nodejs;
+import java.sql.*;
+import java.util.Scanner;
+public class sumofid {
+    	public static void main(String[] args) {
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost/nodejs", "root", "1234");
+                        Statement s = con.createStatement()) {
+                       Scanner sc = new Scanner(System.in);
+                       String sumQuery = "select sum(s_id) from student";
+                       ResultSet res=s.executeQuery(sumQuery);
+                       while(res.next()) {
+                    	   int ans=res.getInt(1);
+                    	   System.out.println("sum="+ ans);
+                       }
+                       System.out.println("Data update successfully");
+                   } catch (SQLException err) {
+                       System.out.println("ERROR: " + err);
+                   }
+            } catch (ClassNotFoundException e) {
+                System.out.println("MySQL JDBC driver not found");
+            }
+        }
+    }
+
+
+COUNT:
+------
+package nodejs;
+import java.sql.*;
+import java.util.Scanner;
+public class countqurey{
+    	public static void main(String[] args) {
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost/nodejs", "root", "1234");
+                        Statement s = con.createStatement()) {
+                       Scanner sc = new Scanner(System.in);
+                       String countQuery = "select count(s_id) from student";
+                       ResultSet res=s.executeQuery(countQuery);
+                       while(res.next()) {
+                    	   int ans=res.getInt(1);
+                    	   System.out.println("count="+ ans);
+                       }
+                       System.out.println("Data update successfully");
+                   } catch (SQLException err) {
+                       System.out.println("ERROR: " + err);
+                   }
+            } catch (ClassNotFoundException e) {
+                System.out.println("MySQL JDBC driver not found");
+            }
+        }
+    }
+
+
+xml:
+----
+
+<bookstore>
+    <book id='1'>
+    <title> Data Structures through C </title>
+	<author> Yashwant Kanetkar, BPB Publications </author>
+	<price> $40 </price>
+    </book>
+    <book id='2'>
+    <title> Computer Organization , Architecture </title>
+	<author> Rajaraman, PHI </author>
+	<price> $50 </price>
+    </book>
+    <book id='3'>
+    <title> Fundamental of Database Systems </title>
+	<author> E. Ramez and Navathe,Pearson </author>
+	<price> $65 </price>
+    </book>
+</bookstore>
+
+
+
+
+
+weather
+:
+--------
+
+
+<head>
+	<link rel="stylesheet" href="demo.css">
+
+	<title>GFG App</title>
+</head>
+<body>
+	<div class="container">
+		<div class="weather-card">
+			<h1 style="color: green;">
+				BVRIT HYDERABAD</h1>
+			<h3>Weather App</h3>
+			<input type="text" id="city-input"
+				placeholder="Enter city name">
+			<button id="city-input-btn"
+					onclick="weatherFn($('#city-input').val())">Get Weather</button>
+			<div id="weather-info"
+				class="animate__animated animate__fadeIn">
+				<h3 id="city-name"></h3>
+				<p id="date"></p>
+				<p id="temperature"></p>
+				<p id="description"></p>
+				<p id="wind-speed"></p>
+			</div>
+		</div>
+	</div>
+	<script src=
+"https://code.jquery.com/jquery-3.6.0.min.js">
+	</script>
+	<script src=
+"https://momentjs.com/downloads/moment.min.js">
+	</script>
+	<script>
+
+const url =
+    'https://api.openweathermap.org/data/2.5/weather';
+const apiKey =
+    'f00c38e0279b7bc85480c3fe775d518c';
+
+$(document).ready(function () {
+    weatherFn('Pune');
+});
+
+async function weatherFn(cName) {
+    const temp =
+        `${url}?q=${cName}&appid=${apiKey}&units=metric`;
+    try {
+        const res = await fetch(temp);
+        const data = await res.json();
+        if (res.ok) {
+            weatherShowFn(data);
+        } else {
+            alert('City not found. Please try again.');
+        }
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+    }
+}
+
+function weatherShowFn(data) {
+    $('#city-name').text(data.name);
+    $('#date').text(moment().
+        format('MMMM Do YYYY, h:mm:ss a'));
+    $('#temperature').
+        html(`${data.main.temp}°C`);
+    $('#description').
+        text(data.weather[0].description);
+    $('#wind-speed').
+        html(`Wind Speed: ${data.wind.speed} m/s`);
+    $('#weather-icon').
+        attr('src',
+            `...`);
+    $('#weather-info').fadeIn();
+}
+</script>
+</body>
+</html>
+
+css:===
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: linear-gradient(to right, #4CAF50, #2196F3);
+}
+
+.container {
+	text-align: center;
+}
+.weather-card {
+	background-color: rgba(255, 255, 255, 0.95);
+	border-radius: 20px;
+	padding: 20px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease-in-out;
+	width: 450px;
+}
+.weather-card:hover {
+	transform: scale(1.05);
+}
+#city-input {
+	padding: 15px;
+	margin: 10px 0;
+	width: 70%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+#city-input:focus {
+	outline: none;
+	border-color: #2196F3;
+}
+#city-input::placeholder {
+	color: #aaa;
+}
+#city-input-btn {
+	padding: 10px;
+	background-color: #2196F3;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+#city-input-btn:hover {
+	background-color: #1565C0;
+}
+#weather-info {
+	display: none;
+}
+
+#temperature {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 8px 0;
+}
+
+#description {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+#wind-speed {
+	font-size: 16px;
+	color: rgb(255, 0, 0);
+}
+
+#date {
+	font-size: 14px;
+	color: rgb(255, 0, 0);
+}
+
+
